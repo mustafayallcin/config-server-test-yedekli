@@ -1,0 +1,368 @@
+application.encryption.key:
+  configValueCount: "SINGLE"
+  configValueType: "STRING"
+  displayName: "Report Encryption Key"
+  description: "Symmetric encryption key used for encrypting sensitive report data"
+  sectionName: "REPORT_ENCRYPTION_KEY"
+  encrypted: true
+  rule: null
+  restartRequired: true
+  defaultValue: "report-encryption-key"
+application.encryption.salt:
+  configValueCount: "SINGLE"
+  configValueType: "STRING"
+  displayName: "Report Encryption Salt"
+  description: "Salt value used together with the encryption key for report data security"
+  sectionName: "REPORT_ENCRYPTION_SALT"
+  encrypted: true
+  rule: null
+  restartRequired: true
+  defaultValue: "report-encryption-salt"
+application.keycloak-admin.app-realm-id:
+  configValueCount: "SINGLE"
+  configValueType: "STRING"
+  displayName: "Keycloak App Realm ID"
+  description: "The realm where the application client is registered"
+  sectionName: "KEYCLOAK_APP_REALM_ID"
+  encrypted: false
+  rule: null
+  restartRequired: true
+  defaultValue: "sistas"
+application.keycloak-admin.app-resource-id:
+  configValueCount: "SINGLE"
+  configValueType: "STRING"
+  displayName: "Keycloak App Resource (Client) ID"
+  description: "OAuth2 client ID registered in Keycloak for this application"
+  sectionName: "KEYCLOAK_APP_RESOURCE_ID"
+  encrypted: false
+  rule: null
+  restartRequired: true
+  defaultValue: "chatbot"
+application.keycloak-admin.app-resource-secret:
+  configValueCount: "SINGLE"
+  configValueType: "STRING"
+  displayName: "Keycloak App Resource Secret"
+  description: "OAuth2 client secret registered in Keycloak for this application"
+  sectionName: "KEYCLOAK_APP_RESOURCE_SECRET"
+  encrypted: true
+  rule: null
+  restartRequired: true
+  defaultValue: "keycloak-resource-secret"
+application.keycloak-admin.client-id:
+  configValueCount: "SINGLE"
+  configValueType: "STRING"
+  displayName: "Keycloak Admin Client ID"
+  description: "Client ID used for Keycloak admin CLI operations (e.g. admin-cli)"
+  sectionName: "KEYCLOAK_ADMIN_CLIENT_ID"
+  encrypted: false
+  rule: null
+  restartRequired: true
+  defaultValue: "admin-cli"
+application.keycloak-admin.max-pool-size:
+  configValueCount: "SINGLE"
+  configValueType: "LONG"
+  displayName: "Keycloak Admin Max Pool Size"
+  description: "Maximum connection pool size for Keycloak admin client"
+  sectionName: "KEYCLOAK_ADMIN_MAX_POOL_SIZE"
+  encrypted: false
+  rule: null
+  restartRequired: false
+  defaultValue: 10
+application.keycloak-admin.password:
+  configValueCount: "SINGLE"
+  configValueType: "STRING"
+  displayName: "Keycloak Admin Password"
+  description: "Keycloak admin console password"
+  sectionName: "KEYCLOAK_ADMIN_PASSWORD"
+  encrypted: true
+  rule: null
+  restartRequired: false
+  defaultValue: "keycloak-admin-password"
+application.keycloak-admin.realm:
+  configValueCount: "SINGLE"
+  configValueType: "STRING"
+  displayName: "Keycloak Admin Realm"
+  description: "Realm used for Keycloak admin operations (typically \"master\")"
+  sectionName: "KEYCLOAK_ADMIN_REALM"
+  encrypted: false
+  rule: null
+  restartRequired: true
+  defaultValue: "master"
+application.keycloak-admin.server-url:
+  configValueCount: "SINGLE"
+  configValueType: "STRING"
+  displayName: "Keycloak Server URL"
+  description: "Base URL of the Keycloak server"
+  sectionName: "KEYCLOAK_SERVER_URL"
+  encrypted: false
+  rule: null
+  restartRequired: true
+  defaultValue: "https://keycloak.example.com"
+application.keycloak-admin.trusted-audiences:
+  configValueCount: "LIST"
+  configValueType: "STRING"
+  displayName: "Keycloak Trusted Audiences"
+  description: "Comma-separated list of trusted audience values for JWT validation"
+  sectionName: "KEYCLOAK_TRUSTED_AUDIENCES"
+  encrypted: false
+  rule: null
+  restartRequired: false
+  defaultValue:
+  - "sistas-eva"
+  - "smart"
+  - "campus"
+  - "sistas-phone"
+  - "chatbot"
+application.keycloak-admin.username:
+  configValueCount: "SINGLE"
+  configValueType: "STRING"
+  displayName: "Keycloak Admin Username"
+  description: "Keycloak admin console username"
+  sectionName: "KEYCLOAK_ADMIN_USERNAME"
+  encrypted: true
+  rule: null
+  restartRequired: false
+  defaultValue: "keycloak-admin-username"
+application.report-management.default-page-size:
+  configValueCount: "SINGLE"
+  configValueType: "LONG"
+  displayName: "Report Default Page Size"
+  description: "Default number of rows per page in paginated report results"
+  sectionName: "REPORT_DEFAULT_PAGE_SIZE"
+  encrypted: false
+  rule: null
+  restartRequired: false
+  defaultValue: 50
+application.report-management.export-directory:
+  configValueCount: "SINGLE"
+  configValueType: "STRING"
+  displayName: "Report Export Directory"
+  description: "File system path where exported report files (Excel, PDF etc.) are\
+    \ saved"
+  sectionName: "REPORT_EXPORT_DIRECTORY"
+  encrypted: false
+  rule: null
+  restartRequired: false
+  defaultValue: null
+application.report-management.forbidden-sql-keywords:
+  configValueCount: "LIST"
+  configValueType: "STRING"
+  displayName: "Report Forbidden SQL Keywords"
+  description: "List of SQL keywords that are not allowed in report queries as a security\
+    \ measure"
+  sectionName: "REPORT_FORBIDDEN_SQL_KEYWORDS"
+  encrypted: false
+  rule: null
+  restartRequired: false
+  defaultValue:
+  - "DELETE"
+  - "DROP"
+  - "TRUNCATE"
+  - "ALTER"
+  - "UPDATE"
+  - "INSERT"
+application.report-management.max-rows:
+  configValueCount: "SINGLE"
+  configValueType: "LONG"
+  displayName: "Report Max Rows"
+  description: "Maximum number of rows returned in a single report query result"
+  sectionName: "REPORT_MAX_ROWS"
+  encrypted: false
+  rule: null
+  restartRequired: false
+  defaultValue: 5000
+application.report-management.mssql-parameter-limit:
+  configValueCount: "SINGLE"
+  configValueType: "LONG"
+  displayName: "MSSQL Parameter Limit"
+  description: "Maximum number of parameters allowed in a single MSSQL query (IN clause\
+    \ limit)"
+  sectionName: "REPORT_MSSQL_PARAMETER_LIMIT"
+  encrypted: false
+  rule: null
+  restartRequired: false
+  defaultValue: 2000
+application.report-management.provider-acquire-timeout-ms:
+  configValueCount: "SINGLE"
+  configValueType: "LONG"
+  displayName: "Report Provider Acquire Timeout (ms)"
+  description: "Maximum time in milliseconds to wait for an available report provider\
+    \ slot"
+  sectionName: "REPORT_PROVIDER_ACQUIRE_TIMEOUT_MS"
+  encrypted: false
+  rule: null
+  restartRequired: false
+  defaultValue: 2000
+application.report-management.provider-circuit-failure-threshold:
+  configValueCount: "SINGLE"
+  configValueType: "LONG"
+  displayName: "Report Provider Circuit Breaker Failure Threshold"
+  description: "Number of consecutive failures before the report provider circuit\
+    \ breaker opens"
+  sectionName: "REPORT_PROVIDER_CIRCUIT_FAILURE_THRESHOLD"
+  encrypted: false
+  rule: null
+  restartRequired: false
+  defaultValue: 5
+application.report-management.provider-circuit-open-seconds:
+  configValueCount: "SINGLE"
+  configValueType: "LONG"
+  displayName: "Report Provider Circuit Breaker Open Duration (seconds)"
+  description: "Duration in seconds the report provider circuit breaker stays open\
+    \ before retrying"
+  sectionName: "REPORT_PROVIDER_CIRCUIT_OPEN_SECONDS"
+  encrypted: false
+  rule: null
+  restartRequired: false
+  defaultValue: 5
+application.report-management.provider-max-concurrent:
+  configValueCount: "SINGLE"
+  configValueType: "LONG"
+  displayName: "Report Provider Max Concurrent"
+  description: "Maximum number of concurrent report generation tasks per provider"
+  sectionName: "REPORT_PROVIDER_MAX_CONCURRENT"
+  encrypted: false
+  rule: null
+  restartRequired: false
+  defaultValue: 4
+application.report-management.provider-retry-count:
+  configValueCount: "SINGLE"
+  configValueType: "LONG"
+  displayName: "Report Provider Retry Count"
+  description: "Number of retries when a report provider task fails"
+  sectionName: "REPORT_PROVIDER_RETRY_COUNT"
+  encrypted: false
+  rule: null
+  restartRequired: false
+  defaultValue: 1
+application.report-management.provider-retry-delay-ms:
+  configValueCount: "SINGLE"
+  configValueType: "LONG"
+  displayName: "Report Provider Retry Delay (ms)"
+  description: "Delay in milliseconds between report provider retry attempts"
+  sectionName: "REPORT_PROVIDER_RETRY_DELAY_MS"
+  encrypted: false
+  rule: null
+  restartRequired: false
+  defaultValue: 250
+application.report-management.query-timeout-seconds:
+  configValueCount: "SINGLE"
+  configValueType: "LONG"
+  displayName: "Report Query Timeout (seconds)"
+  description: "Maximum time in seconds before a report query is forcefully terminated"
+  sectionName: "REPORT_QUERY_TIMEOUT_SECONDS"
+  encrypted: false
+  rule: null
+  restartRequired: false
+  defaultValue: 60
+application.report-schedule.poll-interval-ms:
+  configValueCount: "SINGLE"
+  configValueType: "LONG"
+  displayName: "Report Schedule Poll Interval (ms)"
+  description: "Polling interval in milliseconds for checking and triggering scheduled\
+    \ reports"
+  sectionName: "REPORT_SCHEDULE_POLL_INTERVAL_MS"
+  encrypted: false
+  rule: null
+  restartRequired: false
+  defaultValue: 30000
+eureka.client.service-url.defaultZone:
+  configValueCount: "SINGLE"
+  configValueType: "STRING"
+  displayName: "Eureka Default Zone URL"
+  description: "Eureka server URL including basic auth credentials for service registration"
+  sectionName: "EUREKA_DEFAULT_ZONE"
+  encrypted: true
+  rule: null
+  restartRequired: true
+  defaultValue: "http://USERNAME:PASSWORD@localhost:8761/eureka/"
+jhipster.mail.from:
+  configValueCount: "SINGLE"
+  configValueType: "STRING"
+  displayName: "Mail From Address"
+  description: "Sender e-mail address shown in the From field of outgoing report mails"
+  sectionName: "MAIL_FROM_ADDRESS"
+  encrypted: false
+  rule: null
+  restartRequired: false
+  defaultValue: "report@example.com"
+server.port:
+  configValueCount: "SINGLE"
+  configValueType: "LONG"
+  displayName: "Server Port"
+  description: "HTTP port the application listens on"
+  sectionName: "SERVER_PORT"
+  encrypted: false
+  rule: null
+  restartRequired: true
+  defaultValue: 26085
+spring.datasource.password:
+  configValueCount: "SINGLE"
+  configValueType: "STRING"
+  displayName: "Datasource Password"
+  description: "Database login password"
+  sectionName: "DATASOURCE_PASSWORD"
+  encrypted: true
+  rule: null
+  restartRequired: true
+  defaultValue: "datasource-password"
+spring.datasource.url:
+  configValueCount: "SINGLE"
+  configValueType: "STRING"
+  displayName: "Datasource URL"
+  description: "Database connection URL (MSSQL / MySQL / PostgreSQL)"
+  sectionName: "DATASOURCE_URL"
+  encrypted: false
+  rule: null
+  restartRequired: true
+  defaultValue: "jdbc:sqlserver://localhost:1433;database=reportserver-v2;encrypt=false"
+spring.datasource.username:
+  configValueCount: "SINGLE"
+  configValueType: "STRING"
+  displayName: "Datasource Username"
+  description: "Database login username"
+  sectionName: "DATASOURCE_USERNAME"
+  encrypted: true
+  rule: null
+  restartRequired: true
+  defaultValue: "datasource-username"
+spring.mail.host:
+  configValueCount: "SINGLE"
+  configValueType: "STRING"
+  displayName: "Mail Server Host"
+  description: "SMTP server hostname for outgoing mail"
+  sectionName: "MAIL_HOST"
+  encrypted: false
+  rule: null
+  restartRequired: false
+  defaultValue: "mail.example.com"
+spring.mail.password:
+  configValueCount: "SINGLE"
+  configValueType: "STRING"
+  displayName: "Mail Password"
+  description: "SMTP authentication password"
+  sectionName: "MAIL_PASSWORD"
+  encrypted: true
+  rule: null
+  restartRequired: false
+  defaultValue: "mail-password"
+spring.mail.port:
+  configValueCount: "SINGLE"
+  configValueType: "LONG"
+  displayName: "Mail Server Port"
+  description: "SMTP server port (e.g. 587 for STARTTLS, 465 for SSL)"
+  sectionName: "MAIL_PORT"
+  encrypted: false
+  rule: null
+  restartRequired: false
+  defaultValue: 587
+spring.mail.username:
+  configValueCount: "SINGLE"
+  configValueType: "STRING"
+  displayName: "Mail Username"
+  description: "SMTP authentication username / sender e-mail address"
+  sectionName: "MAIL_USERNAME"
+  encrypted: true
+  rule: null
+  restartRequired: false
+  defaultValue: "mail-username"
