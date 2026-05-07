@@ -1,0 +1,290 @@
+application.microservice-configuration.hazelcast.discovery-mechanism:
+  configValueCount: "SINGLE"
+  configValueType: "STRING"
+  displayName: "Hazelcast Discovery Mechanism"
+  description: "Hazelcast cluster discovery mechanism (e.g. lite_member, native_client)"
+  sectionName: "HAZELCAST_DISCOVERY_MECHANISM"
+  encrypted: false
+  rule: null
+  restartRequired: true
+  defaultValue: "lite_member"
+application.microservice-configuration.hazelcast.lite-member.cluster-members:
+  configValueCount: "SINGLE"
+  configValueType: "STRING"
+  displayName: "Hazelcast Lite Member Cluster Members"
+  description: "Comma-separated Eureka service name(s) of the Hazelcast cluster to\
+    \ join as a lite member"
+  sectionName: "HAZELCAST_LITE_MEMBER_CLUSTER_MEMBERS"
+  encrypted: false
+  rule: null
+  restartRequired: true
+  defaultValue: "statserver"
+application.microservice-configuration.hazelcast.lite-member.instance-port-padding:
+  configValueCount: "SINGLE"
+  configValueType: "LONG"
+  displayName: "Hazelcast Lite Member Instance Port Padding"
+  description: "Port offset added to server.port to determine the Hazelcast member\
+    \ port (server.port + padding)"
+  sectionName: "HAZELCAST_LITE_MEMBER_PORT_PADDING"
+  encrypted: false
+  rule: null
+  restartRequired: true
+  defaultValue: 5701
+application.service-time-configuration.service-time1-lower-bound:
+  configValueCount: "SINGLE"
+  configValueType: "LONG"
+  displayName: "Service Time Band 1 Lower Bound (seconds)"
+  description: "Lower bound in seconds for the first service time classification band"
+  sectionName: "SERVICE_TIME1_LOWER_BOUND"
+  encrypted: false
+  rule: null
+  restartRequired: false
+  defaultValue: 0
+application.service-time-configuration.service-time1-upper-bound:
+  configValueCount: "SINGLE"
+  configValueType: "LONG"
+  displayName: "Service Time Band 1 Upper Bound (seconds)"
+  description: "Upper bound in seconds for the first service time classification band"
+  sectionName: "SERVICE_TIME1_UPPER_BOUND"
+  encrypted: false
+  rule: null
+  restartRequired: false
+  defaultValue: 10
+application.service-time-configuration.service-time2-lower-bound:
+  configValueCount: "SINGLE"
+  configValueType: "LONG"
+  displayName: "Service Time Band 2 Lower Bound (seconds)"
+  description: "Lower bound in seconds for the second service time classification\
+    \ band"
+  sectionName: "SERVICE_TIME2_LOWER_BOUND"
+  encrypted: false
+  rule: null
+  restartRequired: false
+  defaultValue: 10
+application.service-time-configuration.service-time2-upper-bound:
+  configValueCount: "SINGLE"
+  configValueType: "LONG"
+  displayName: "Service Time Band 2 Upper Bound (seconds)"
+  description: "Upper bound in seconds for the second service time classification\
+    \ band"
+  sectionName: "SERVICE_TIME2_UPPER_BOUND"
+  encrypted: false
+  rule: null
+  restartRequired: false
+  defaultValue: 20
+application.service-time-configuration.service-time3-lower-bound:
+  configValueCount: "SINGLE"
+  configValueType: "LONG"
+  displayName: "Service Time Band 3 Lower Bound (seconds)"
+  description: "Lower bound in seconds for the third service time classification band"
+  sectionName: "SERVICE_TIME3_LOWER_BOUND"
+  encrypted: false
+  rule: null
+  restartRequired: false
+  defaultValue: 20
+application.service-time-configuration.service-time3-upper-bound:
+  configValueCount: "SINGLE"
+  configValueType: "LONG"
+  displayName: "Service Time Band 3 Upper Bound (seconds)"
+  description: "Upper bound in seconds for the third service time classification band"
+  sectionName: "SERVICE_TIME3_UPPER_BOUND"
+  encrypted: false
+  rule: null
+  restartRequired: false
+  defaultValue: 30
+application.service-time-configuration.service-time4-lower-bound:
+  configValueCount: "SINGLE"
+  configValueType: "LONG"
+  displayName: "Service Time Band 4 Lower Bound (seconds)"
+  description: "Lower bound in seconds for the fourth service time classification\
+    \ band"
+  sectionName: "SERVICE_TIME4_LOWER_BOUND"
+  encrypted: false
+  rule: null
+  restartRequired: false
+  defaultValue: 30
+application.service-time-configuration.service-time4-upper-bound:
+  configValueCount: "SINGLE"
+  configValueType: "LONG"
+  displayName: "Service Time Band 4 Upper Bound (seconds)"
+  description: "Upper bound in seconds for the fourth service time classification\
+    \ band"
+  sectionName: "SERVICE_TIME4_UPPER_BOUND"
+  encrypted: false
+  rule: null
+  restartRequired: false
+  defaultValue: 60
+application.svr-configuration.url:
+  configValueCount: "SINGLE"
+  configValueType: "STRING"
+  displayName: "SVR (Voice Server) URL"
+  description: "Base URL of the voice server (SVR) used for statistics data retrieval"
+  sectionName: "SVR_URL"
+  encrypted: false
+  rule: null
+  restartRequired: false
+  defaultValue: "http://127.0.0.1:8080"
+eureka.client.service-url.defaultZone:
+  configValueCount: "SINGLE"
+  configValueType: "STRING"
+  displayName: "Eureka Default Zone URL"
+  description: "Eureka server URL including basic auth credentials for service registration"
+  sectionName: "EUREKA_DEFAULT_ZONE"
+  encrypted: true
+  rule: null
+  restartRequired: true
+  defaultValue: "http://USERNAME:PASSWORD@localhost:8761/eureka/"
+kafka.agentMessageTopic:
+  configValueCount: "SINGLE"
+  configValueType: "STRING"
+  displayName: "Kafka Agent Message Topic"
+  description: "Kafka topic name for agent status and state messages"
+  sectionName: "KAFKA_AGENT_MESSAGE_TOPIC"
+  encrypted: false
+  rule: null
+  restartRequired: false
+  defaultValue: "AGENT_MESSAGE_TOPIC"
+kafka.bootstrap-servers:
+  configValueCount: "SINGLE"
+  configValueType: "STRING"
+  displayName: "Kafka Bootstrap Servers"
+  description: "Comma-separated list of Kafka broker addresses"
+  sectionName: "KAFKA_BOOTSTRAP_SERVERS"
+  encrypted: false
+  rule: null
+  restartRequired: true
+  defaultValue: "127.0.0.1:9092"
+kafka.callMessageTopic:
+  configValueCount: "SINGLE"
+  configValueType: "STRING"
+  displayName: "Kafka Call Message Topic"
+  description: "Kafka topic name for call event messages"
+  sectionName: "KAFKA_CALL_MESSAGE_TOPIC"
+  encrypted: false
+  rule: null
+  restartRequired: false
+  defaultValue: "CALL_MESSAGE_TOPIC"
+kafka.configChangeTopic:
+  configValueCount: "SINGLE"
+  configValueType: "STRING"
+  displayName: "Kafka Config Change Topic"
+  description: "Kafka topic name used for broadcasting configuration change events"
+  sectionName: "KAFKA_CONFIG_CHANGE_TOPIC"
+  encrypted: false
+  rule: null
+  restartRequired: false
+  defaultValue: "CONFIG_CHANGE_TOPIC"
+kafka.generalMessageTopic:
+  configValueCount: "SINGLE"
+  configValueType: "STRING"
+  displayName: "Kafka General Message Topic"
+  description: "Kafka topic name for general broadcast messages"
+  sectionName: "KAFKA_GENERAL_MESSAGE_TOPIC"
+  encrypted: false
+  rule: null
+  restartRequired: false
+  defaultValue: "GENERAL_MESSAGE_TOPIC"
+scheduled.clear-all-statistics.cron:
+  configValueCount: "SINGLE"
+  configValueType: "STRING"
+  displayName: "Clear All Statistics Cron Expression"
+  description: "Cron expression controlling when all accumulated statistics are reset\
+    \ (typically midnight daily)"
+  sectionName: "SCHEDULED_CLEAR_ALL_STATISTICS_CRON"
+  encrypted: false
+  rule: null
+  restartRequired: false
+  defaultValue: "0 0 0 1/1 * ?"
+scheduled.config.changed-states-interval:
+  configValueCount: "SINGLE"
+  configValueType: "LONG"
+  displayName: "Changed States Interval (ms)"
+  description: "Polling interval in milliseconds for detecting changed agent/queue\
+    \ state data"
+  sectionName: "SCHEDULED_CHANGED_STATES_INTERVAL_MS"
+  encrypted: false
+  rule: null
+  restartRequired: false
+  defaultValue: 10000
+scheduled.config.changed-statistics-interval:
+  configValueCount: "SINGLE"
+  configValueType: "LONG"
+  displayName: "Changed Statistics Interval (ms)"
+  description: "Polling interval in milliseconds for detecting changed statistics\
+    \ data"
+  sectionName: "SCHEDULED_CHANGED_STATISTICS_INTERVAL_MS"
+  encrypted: false
+  rule: null
+  restartRequired: false
+  defaultValue: 30000
+scheduled.config.cron:
+  configValueCount: "SINGLE"
+  configValueType: "STRING"
+  displayName: "Statistics Config Sync Cron Expression"
+  description: "Cron expression controlling how frequently statistics configuration\
+    \ is synchronized"
+  sectionName: "SCHEDULED_CONFIG_CRON"
+  encrypted: false
+  rule: null
+  restartRequired: false
+  defaultValue: "0 0/10 * * * ?"
+security.api-access.access-token:
+  configValueCount: "SINGLE"
+  configValueType: "STRING"
+  displayName: "API Access Token"
+  description: "Static bearer token used to secure internal API endpoints"
+  sectionName: "API_ACCESS_TOKEN"
+  encrypted: true
+  rule: null
+  restartRequired: false
+  defaultValue: "api-access-token"
+server.port:
+  configValueCount: "SINGLE"
+  configValueType: "LONG"
+  displayName: "Server Port"
+  description: "HTTP port the application listens on"
+  sectionName: "SERVER_PORT"
+  encrypted: false
+  rule: null
+  restartRequired: true
+  defaultValue: 26081
+spring.cloud.stream.kafka.binder.brokers:
+  configValueCount: "SINGLE"
+  configValueType: "STRING"
+  displayName: "Kafka Stream Binder Brokers"
+  description: "Kafka broker address used by Spring Cloud Stream binder"
+  sectionName: "KAFKA_STREAM_BINDER_BROKERS"
+  encrypted: false
+  rule: null
+  restartRequired: true
+  defaultValue: "127.0.0.1:9092"
+spring.security.oauth2.client.provider.oidc.issuer-uri:
+  configValueCount: "SINGLE"
+  configValueType: "STRING"
+  displayName: "OIDC Issuer URI"
+  description: "Keycloak realm issuer URI used for OAuth2 token validation"
+  sectionName: "OIDC_ISSUER_URI"
+  encrypted: false
+  rule: null
+  restartRequired: true
+  defaultValue: "https://keycloak.example.com/realms/sistas"
+spring.security.oauth2.client.registration.oidc.client-id:
+  configValueCount: "SINGLE"
+  configValueType: "STRING"
+  displayName: "OAuth2 Client ID"
+  description: "OAuth2 client ID registered in Keycloak for this service"
+  sectionName: "OAUTH2_CLIENT_ID"
+  encrypted: false
+  rule: null
+  restartRequired: true
+  defaultValue: "chatbot"
+spring.security.oauth2.client.registration.oidc.client-secret:
+  configValueCount: "SINGLE"
+  configValueType: "STRING"
+  displayName: "OAuth2 Client Secret"
+  description: "OAuth2 client secret registered in Keycloak for this service"
+  sectionName: "OAUTH2_CLIENT_SECRET"
+  encrypted: true
+  rule: null
+  restartRequired: true
+  defaultValue: "oauth2-client-secret"
