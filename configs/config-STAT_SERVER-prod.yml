@@ -1,0 +1,56 @@
+application:
+  microservice-configuration:
+    hazelcast:
+      discovery-mechanism: "lite_member"
+      lite-member:
+        cluster-members: "statserver"
+        instance-port-padding: 5701
+  service-time-configuration:
+    service-time1-lower-bound: 0
+    service-time1-upper-bound: 10
+    service-time2-lower-bound: 10
+    service-time2-upper-bound: 20
+    service-time3-lower-bound: 20
+    service-time3-upper-bound: 30
+    service-time4-lower-bound: 30
+    service-time4-upper-bound: 60
+  svr-configuration:
+    url: "https://192.168.12.199:8050"
+eureka:
+  client:
+    service-url:
+      defaultZone: "{cipher}b52933a2628c407580ab74e8db87b65cc21d5972942e8a8a18c4b010f9f0a12f14acf14a5140ecbc0da1dd69df20ae02a8b86972ca775ba5c2cb9bee0cdb2e96"
+kafka:
+  agentMessageTopic: "AGENT_MESSAGE_TOPIC"
+  bootstrap-servers: "192.168.12.198:9092"
+  callMessageTopic: "CALL_MESSAGE_TOPIC"
+  configChangeTopic: "CONFIG_CHANGE_TOPIC"
+  generalMessageTopic: "GENERAL_MESSAGE_TOPIC"
+scheduled:
+  clear-all-statistics:
+    cron: "0 0 0 1/1 * ?"
+  config:
+    changed-states-interval: 10000
+    changed-statistics-interval: 30000
+    cron: "0 0/10 * * * ?"
+security:
+  api-access:
+    access-token: "{cipher}edacf4d4151f7b9d7ecbaf61f1756188ad78f333ac36f941b20e433c64805a1ce4bbd3424c6c42a6819d272eb9f25628322b7996942d878dbba11524ab686696"
+server:
+  port: 26081
+spring:
+  cloud:
+    stream:
+      kafka:
+        binder:
+          brokers: "192.168.12.198:9092"
+  security:
+    oauth2:
+      client:
+        provider:
+          oidc:
+            issuer-uri: "http://192.168.12.198:8080/realms/sistas"
+        registration:
+          oidc:
+            client-id: "cc-solutions"
+            client-secret: "{cipher}bfd26fcb8f8fc86ada8b1cee7abc87ad7cc7b4979be910b04f025192889e4142890f8852f675dbfb886d7eb0ae80cf399a92456dfcf4b79ecf1b91e4a1bae67a"
