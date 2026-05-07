@@ -1,0 +1,61 @@
+application:
+  encryption:
+    key: "{cipher}bb960ada469ce9601c15f87f5cbc0881bc694f11142c1ad0e254d609bfe79a07ad405fdd1b20e7d897a87aaa0097fc103bd05fcebfaa8a0ccef753eee6f28a01"
+    salt: "{cipher}e236982f655d67e0bda353ad76f820bc9d3fc6bf39d629ff05188498bce21078b62d2aeb1897e4930f3822a071494cc2"
+  keycloak-admin:
+    app-realm-id: "sistas"
+    app-resource-id: "sistas-voice"
+    app-resource-secret: "{cipher}65f73e7e01a39c5a69c5c03533264c70e027830d97f04dedd6cbb0a1b62676de294c18fbb94f6f6f64950073544ea043ce90d83d476d80ac8792aaf4bb306fa0"
+    client-id: "admin-cli"
+    max-pool-size: 10
+    password: "{cipher}8c82bb45dc6b83ee3b61fd4a762b8ac7da63668fd6314859e2927b321198a46f"
+    realm: "master"
+    server-url: "http://192.168.12.198:8080"
+    trusted-audiences:
+    - "sistas-eva"
+    - "smart"
+    - "campus"
+    - "sistas-phone"
+    - "chatbot"
+    - "cc-solutions"
+    username: "{cipher}f67f8b20639e5f9c0090719898bd80a8581546e5f31e73a3a1f4b1cb5428add9f76d6c7b7a140f5c0019920dbc21df09"
+  report-management:
+    default-page-size: 50
+    export-directory: null
+    forbidden-sql-keywords:
+    - "DELETE"
+    - "DROP"
+    - "TRUNCATE"
+    - "ALTER"
+    - "UPDATE"
+    - "INSERT"
+    max-rows: 5000
+    mssql-parameter-limit: 2000
+    provider-acquire-timeout-ms: 2000
+    provider-circuit-failure-threshold: 5
+    provider-circuit-open-seconds: 5
+    provider-max-concurrent: 4
+    provider-retry-count: 1
+    provider-retry-delay-ms: 250
+    query-timeout-seconds: 60
+  report-schedule:
+    poll-interval-ms: 30000
+eureka:
+  client:
+    service-url:
+      defaultZone: "{cipher}3fee724059a6f945798ba3642e0042eadd4af250dc47e3848aca9e1915537d0ab6753774c33979025dc5d8e4cf6e4bdcadee82f6eaa66ab7dc6ab9e374506ab8"
+jhipster:
+  mail:
+    from: "enes.albayrak@sistas.com.tr"
+server:
+  port: 26085
+spring:
+  datasource:
+    password: "{cipher}67bd59227aba2db6da130d322aa29b5b2f752f727c1ddb88c9679c4e9c5d57ea"
+    url: "jdbc:sqlserver://192.168.12.203:31433;database=Test03-ReportServerCC;encrypt=true;trustServerCertificate=true"
+    username: "{cipher}a26f728c7b3e49240f0c937b6c5cb3e571c271f109425a6f43ed19419ffa8356"
+  mail:
+    host: "mail.sistas.com.tr"
+    password: "{cipher}6ac04f16f0b9381bdd83443d6c934bf6c2820e7d866d67b646d59445d94fd6e6"
+    port: 587
+    username: "{cipher}2bb643f3178a55729a6033fdce47f8709a01e0ca09b9e9fd367987698f046a6fb5e93192a6a05043d8c6c210f014b8ae"
